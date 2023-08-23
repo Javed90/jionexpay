@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif !important;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+img {
+  width: 100%;
+}
+
+body h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+body h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+body h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+body h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+body ul {
+  list-style: none;
+  padding: 0;
+}
+
+body a {
+  color: #818189;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+body p {
+  color: #818189;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.jnp-banner {
+  background-image: url(/images/banner.jpg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jnp-banner .container {
+  height: 100%;
+}
+
+header h2 {
+  margin: 0;
+}
+
+.navbar-nav {
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.banner-content {
+  max-width: 900px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+i::before {
+  font-family: "FontAwesome";
+}
+
+.header-btn {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.fade-up,
+.fade-up-two {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.6s ease, transform 1s ease;
+}
+
+.fade-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-two {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 1s forwards;
+}
+
+@keyframes fadeUpAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width:1200px) {
+  .container {
+    max-width: 1300px !important;
+  }
+}
+
+.top-heading {
+  color: var(--e-global-color-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+:root {
+  --e-global-color-primary: #73ddfe;
+  --e-global-color-secondary: #272735;
+  --e-global-color-text: #f460a4;
+  --e-global-color-accent: #73ddfe61;
+}
+
+.fa-circle-check {
+  color: var(--e-global-color-text);
+}
+
+.jnp-bg-banner {
+  background-image: url(/images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background-one {
+  background-color: #f6f7f9;
+}
+
+.background-two {
+  background-color: transparent;
+  background-image: linear-gradient(135deg, #73ddfe61 0%, #f460a440 100%);
+  border-radius: 10px 10px 10px 10px;
+}
+
+i.fa-sharp.fa-solid.fa-circle-arrow-right {
+  padding-left: 5px;
+}
+
+.btn.btn-primary {
+  padding: 13px 20px 13px 20px;
+  background: #000;
+  font-weight: 600;
+  border: 2px solid #000;
+  border-radius: 15px;
+}
+
+.btn.btn-primary:hover {
+  background-color: var(--e-global-color-primary);
+  border-color: var(--e-global-color-primary);
+}
+
+.bg-effect {
+  background-color: var(--e-global-color-primary);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 5px 5px 0px 0px #78C1FA;
+  width: 160px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.jnp-banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.jnp-banner-content {
+  padding: 100px;
+}
+
+.partners {
+  background-color: var(--e-global-color-secondary);
+  padding: 20px 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.how-it-work {
+  padding: 80px 0;
+}
+
+.jnp-step {
+  position: relative;
+}
+
+.round-arrow {
+  width: 110px;
+  position: absolute;
+  right: -18%;
+  top: -20px;
+}
+
+.our-mission ul li {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  gap: 10px;
+}
+
+.our-mission {
+  padding: 80px 0;
+}
+
+.about-mission {
+  position: relative;
+}
+
+.about-mission ul {
+  margin-bottom: 40px;
+}
+
+.round-arrow-two {
+  position: absolute;
+  bottom: 30px;
+  /* right: 30px; */
+  left: 230px;
+  rotate: 150deg;
+}
+
+.our-mission-img {
+  background-color: var(--e-global-color-accent);
+  border-radius: 15px;
+}
+
+.image-section {
+  position: relative;
+  height: 500px;
+}
+
+.animated-image {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slide infinite 3s linear;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  left: -20px;
+}
+
+.animated-image img {
+  border-radius: 15px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.animated-img-one {
+  width: 100%;
+
+  border-radius: 30px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  height: 210px;
+}
+
+.animated-img-one img {
+  width: 70%;
+
+}
+
+.animated-img-two {
+  width: 50%;
+  padding: 0px 15px 0px 0px;
+  border-radius: 30px;
+  height: 250px;
+}
+
+.animated-img-three {
+  width: 50%;
+  padding: 0px 0px 0px 15px;
+  border-radius: 30px;
+  height: 300px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-5px);
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateX(5px);
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateX(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+
+
+.jnp-mission {
+  padding: 80px 0;
+}
+
+.jnp-mission .container {
+  position: relative;
+}
+
+.play-video {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.play-video>div {
+  width: 150px;
+  height: 150px;
+  background: #000;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.play-video>div i {
+  color: #fff;
+  font-size: 80px;
+}
+
+.jnp-mission .section-head ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.jnp-mission .section-head ul li {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #818189;
+}
+
+.jnp-wallet-imgages {
+  height: 715px;
+  overflow: hidden;
+  display: flex;
+  background-color: transparent;
+  background-image: radial-gradient(at center center, var(--e-global-color-accent) 0%, #73DDFE00 70%);
+  opacity: 0.5;
+}
+
+
+.wallet-img {
+  position: absolute;
+  overflow: hidden;
+  animation: down infinite 30s linear;
+  display: flex;
+  flex-wrap: wrap;
+  top: 0;
+}
+
+.wallet-img-two {
+  animation-delay: 5s;
+}
+
+.jnp-wallet-image {
+  position: relative;
+  width: 33.33%;
+}
+
+.animate-up-down {
+  padding: 10px;
+}
+
+@keyframes down {
+  0% {
+    top: 0;
+  }
+
+  25% {
+    top: -350px;
+  }
+
+  50% {
+    top: -700px;
+  }
+
+  75% {
+    top: -350px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.jnp-wallet-image img {
+  border-radius: 15px;
+
+}
+
+.services {
+  padding: 80px 0;
+}
+
+.our-service {
+  background: #fff;
+  padding: 25px;
+  border: 1px solid #e4e6eb;
+  border-radius: 15px;
+}
+
+.our-service img {
+  height: 200px;
+  object-fit: contain;
+}
+
+.payment-analytics img {
+  height: 325px;
+}
+
+.payment-analytics .background-two {
+  margin-bottom: 25px;
+}
+
+.quk-mny-transfer {
+  margin-top: 20px;
+}
+
+.jnp-carreer {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.our-vision {
+  padding: 80px 0;
+}
+
+.round-arrow-three {
+  width: 110px;
+  rotate: 235deg;
+}
+
+.jnp-vision {
+  display: flex;
+}
+
+.jnp-carreer span {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.jnp-vision .bg-effect {
+  padding: 12px;
+  width: 80px;
+  margin-left: 0;
+}
+
+.jnp-carreer .plus {
+  color: var(--e-global-color-text);
+}
+
+.our-customers {
+  padding: 80px 0;
+}
+
+element.style {
+  width: 396px;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.customer {
+  margin: 15px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+}
+
+.our-customers h2 {
+  max-width: 550px;
+}
+
+.client-deatils img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.client-deatils {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.client-deatils p {
+  margin: 0;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.client .fa-quote-left {
+  color: var(--e-global-color-primary);
+  font-size: 40px;
+}
+
+.our-customer-slider .slick-prev {
+  top: -50px;
+  right: 100px;
+  left: auto;
+  background-color: var(--e-global-color-primary);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 5px 5px 0px 0px #78C1FA;
+  padding: 12px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+}
+
+.our-customer-slider .slick-next {
+  top: -50px;
+  right: 0;
+  left: auto;
+  background-color: var(--e-global-color-primary);
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 5px 5px 0px 0px #78C1FA;
+  padding: 12px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+}
+
+.our-customer-slider .slick-prev::before {
+  content: "\f060";
+  font-family: 'FontAwesome';
+  font-size: 25px;
+}
+
+.our-customer-slider .slick-next::before {
+  content: "\f061";
+  font-family: 'FontAwesome';
+  font-size: 25px;
+}
+
+.jnp-community .col-md-6 {
+  padding: 0;
+}
+
+.dowload-app {
+  display: flex;
+}
+
+.dowload-app img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.jnp-community {
+  padding: 80px 0;
+}
+
+.jnp-community-desc {
+  padding: 60px 0 55px 50px;
+}
+
+.case-studies {
+  padding: 80px 0;
+}
+
+.success-story {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  border-width: 1px 1px 1px 1px;
+  border-color: #e4e6eb;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.success-story-img img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.success-story-contant {
+  padding: 30px;
+}
+
+footer {
+  padding: 80px 0;
+}
+
+form input {
+  padding: 13px;
+  border-radius: 10px;
+  width: 100%;
+  border: 1px solid #818189;
+  color: #818189;
+}
+
+footer ul li i {
+  color: var(--e-global-color-primary);
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+footer ul {
+  margin-top: 30px;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: end;
+}
+
+.social-ac a {
+  border-radius: 7px;
+  background: #000;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  padding: 4px;
+  display: inline-block;
+  text-align: center;
+}
+
+.social-media p {
+  color: #000;
+  margin: 0;
+}
+
+
+.jnp-pymt-proccessing {
+  padding: 80px 0;
+}
+
+.jnp-accordionn {
+  padding-right: 50px;
+}
+
+.jnp-accordion-box {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.jnp-accordion {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 20px 35px 20px 35px;
+  border-radius: 15px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jnp-active .accordion-icon {
+  rotate: 180deg;
+  transition: 0.4s;
+}
+
+.accordion-icon {
+  transition: 0.4s;
+}
+
+.jnp-accordion-box span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.jnp-panel {
+  padding: 0 35px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.jnp-today {
+  padding: 35px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.jnp-today .btn-primary {
+  width: 100%;
+}
+
+
+.team {
+  padding: 80px 0;
+}
+
+.member-img img {
+  height: 280px;
+  object-fit: cover;
+}
+
+.team-member {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 15px 0 #ddd;
+}
+
+.about-member {
+  padding: 20px 30px 0 30px;
+}
+
+.member-social-ac {
+  padding: 0 30px 20px 30px;
+}
+
+.pricing-plans {
+  padding: 80px 0;
+}
+
+.price {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--e-global-color-primary);
+}
+
+.offer-check {
+  height: 25px;
+  width: 25px;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.learn-more .btn.btn-primary {
+  width: 100%;
+}
+
+.pricing-plan {
+  padding: 50px;
+}
+
+.offer-uncheck {
+  height: 25px;
+  width: 25px;
+  color: #000;
+  background: #e4e6eb;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-type {
+  font-size: 17px;
+  font-weight: 500;
+  color: #818189;
+}
+
+.offer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.pricing-plan.pro-plan {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e4e6eb;
+  border-radius: 30px;
+}
+
+.popular {
+  position: absolute;
+  background: #73ddfe;
+  font-weight: 600;
+  font-size: 16px;
+  right: 0;
+  padding: 6px 30px;
+}
+
+.popular .pop-box {
+
+  display: inline-block;
+  background: #fff;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: -20px;
+  top: 3px;
+  transform: rotate(45deg);
+}
+
+.google-map-section iframe {
+  height: 550px;
+  width: 100%;
+}
+
+.contact-form input {
+  border: 1px solid #e4e6eb;
+}
+
+.contact-form textarea {
+  border: 1px solid #e4e6eb;
+  padding: 16px;
+  width: 100%;
+  height: 140px;
+  border-radius: 10px;
+}
+
+.form-field {
+  margin-bottom: 30px;
+}
+
+section.get-in-touch {
+  padding: 80px 0;
+}
+
+.get-in-touch .bg-effect {
+  margin: 0;
+}
+
+.get-in-touch .jnp-vision {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.get-in-touch .jnp-carreer span {
+  font-size: 25px;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .header-btn {
+    display: none;
+  }
+
+  nav.navbar.navbar-expand-lg {
+    justify-content: end;
+    margin-top: -40px;
+  }
+
+  body h1 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  body h2 {
+    font-size: 22px;
+  }
+
+  .jnp-banner-content p {
+    text-align: center;
+  }
+
+  .bg-effect {
+    width: 130px;
+  }
+
+  body h3 {
+    font-size: 20px;
+  }
+
+  .jnp-step {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .jnp-banner-content {
+    text-align: center;
+  }
+
+  .btn.btn-primary {
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+  }
+
+  .how-it-work {
+    padding: 40px 0;
+  }
+
+  .jnp-banner-content {
+    padding: 20px;
+  }
+
+  .round-arrow {
+    display: none;
+  }
+
+  .jnp-mission .section-head ul {
+    flex-direction: column;
+  }
+
+  .our-mission ul li {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .animated-image {
+    right: 0;
+    top: 40px;
+    left: 0;
+  }
+
+  .image-section {
+    margin-top: 40px;
+  }
+
+  .services {
+    padding: 40px 0;
+  }
+
+  .jnp-mission {
+    padding: 40px 0;
+  }
+
+  .round-arrow-two {
+    display: none;
+  }
+
+  .animated-img-two {
+
+    height: 150px;
+  }
+
+  .animated-img-three {
+    height: 160px;
+  }
+
+  .about-mission {
+    position: relative;
+    text-align: center;
+  }
+
+  .our-mission {
+    padding: 40px 0;
+  }
+
+  .jnp-wallet-imgages {
+    height: 250px;
+  }
+
+  .play-video>div {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+  }
+
+  .play-video>div i {
+    color: #fff;
+    font-size: 50px;
+  }
+
+  .our-service {
+    margin-bottom: 20px;
+  }
+
+  .quk-mny-transfer {
+    margin-top: 0;
+  }
+
+  .quk-mny-transfer .row {
+    flex-direction: column-reverse;
+  }
+
+  .quk-mny-transfer h3 {
+    margin-top: 20px;
+  }
+
+  .our-vision {
+    padding: 40px 0;
+  }
+
+  .jnp-vision {
+    margin-bottom: 20px;
+  }
+
+  .jnp-vision {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .our-customers h2 {
+    margin: 0 15px;
+    margin-bottom: 20px;
+  }
+
+  .our-customers {
+    padding: 40px 0;
+  }
+
+  .jnp-community {
+    padding: 40px 15px;
+  }
+
+  .case-studies {
+    padding: 40px 0;
+  }
+
+  .success-story-img img {
+    height: 230px;
+  }
+
+  .success-story {
+    margin-bottom: 20px;
+  }
+
+  .jnp-community-desc {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 40px 0;
+  }
+
+  form .row .col-md-6 {
+    width: 50%;
+  }
+
+  form input {
+    height: 45px;
+  }
+
+  form .row {
+    flex-direction: row !important;
+  }
+
+  .social-media {
+    justify-content: flex-start;
+  }
+
+  .jnp-banner {
+    height: 300px;
+  }
+
+  .pricing-plans {
+    padding: 40px 0;
+  }
+
+  .pricing-plan {
+    padding: 30px;
+  }
+
+  .popular {
+    right: 13px;
+  }
+
+  .jnp-accordionn {
+    padding-right: 0;
+  }
+
+  .team-member {
+    margin-bottom: 20px;
+  }
+
+  .team {
+    padding: 40px 0;
+  }
+
+  .jnp-pymt-proccessing {
+    padding: 40px 0;
+  }
+
+  .jnp-content {
+    text-align: center;
+  }
+
+  section.get-in-touch {
+    padding: 40px 0;
+  }
+}
