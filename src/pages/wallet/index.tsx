@@ -1,8 +1,8 @@
 import { Footer } from "@/layout/footer";
 import { Header } from "@/layout/header";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import Slider from "react-slick";
-
+import { redirect } from 'next/navigation'
 export default function About() {
   var settings = {
     autoplay: true,
@@ -56,19 +56,57 @@ export default function About() {
       },
     ],
   };
-  async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
- 
-    const formData = new FormData(event.currentTarget)
-    const response = await fetch('/api/submit', {
-      method: 'POST',
-      body: formData,
-    })
- 
-    // Handle response if necessary
-    const data = await response.json()
-    // ...
-  }
+  const [formData, setFormData] = useState({
+      amount: '',
+      cust_name: "Johnatan Smith",
+      cust_phone: "(097) 234-5678",
+      cust_address: "Bay Area, San Francisco, CA",
+      request_type: "Deposit",
+      redirect_url: "https://jionexpay.vercel.app/wallet",
+  });
+ const [errorMessage, setErrorMessage] = useState();
+  const handleSubmit = async (event:any) => {
+    event.preventDefault();
+    const headers = {
+      "X-Authorization": "851110fb0bb3a9004d056435b79891d9c8bad7b37b34e0868159026d3381df06",
+      "X-Authorization-Secret": "09d28760d5b454ad613e447b671fb0efaa82d7e853e7fe10fe62a4df2fbee459",
+      "Content-Type": "application/json",
+    };
+    try {
+      
+    const response = await fetch(
+      "https://api.rootficus.com/api/v1/secure/payment_requests",
+      {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify(formData), 
+      }
+    );
+    const data = await response.json();
+      if (data.success == 200) {
+        // Handle success, e.g., show a success message or redirect
+        console.log('Form data submitted successfully');
+     
+        // if(data){
+        //   window.open(
+        //     data.redirect_url,
+        //     '_blank' 
+        //   );
+        // }
+      } else {
+        setErrorMessage(data?.msg)
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  };
+
+  const handleChange = (event:any) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  
   return (
     <>
       <Header></Header>
@@ -117,7 +155,7 @@ export default function About() {
                       <p className="text-muted mb-0">(097) 234-5678</p>
                     </div>
                   </div>
-                 
+
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
@@ -129,27 +167,42 @@ export default function About() {
                       </p>
                     </div>
                   </div>
+                  <hr />
+                  <div className="row">
+                    <div className="col-sm-3">
+                      <p className="mb-0">Amount</p>
+                    </div>
+                    <div className="col-sm-9">
+                      <p className="text-muted mb-0">
+                       100
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="card mb-4">
                 <div className="card-body">
-                <form onSubmit={onSubmit}>
-                  
-                  <div className="form-group">
-                    <label >Amount</label>
-                    <input type="number" name="amount" className="form-control" id="pwd"/>
-                    <input type="hidden" name="cust_name" className="form-control"value="Johnatan Smith" id="pwd"/>
-                    <input type="hidden" name="cust_phone" className="form-control" value="1234567895" id="pwd"/>
-                    <input type="hidden" name="request_type" className="form-control" value="Deposit" id="pwd"/>
-                    <input type="hidden" name="cust_address" className="form-control" value="Bay Area, San Francisco, CA" id="pwd"/>
-                    <input type="hidden" name="redirect_url" className="form-control" value="https://jionexpay.vercel.app/wallet" id="pwd"/>
-                  </div>
-                  <div className="form-group mt-2 text-end">
-                  <button type="submit" className="btn btn-primary ">Pay</button>
-                  </div>
-                </form>
+                  <p className="danger">{errorMessage}</p>
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                      <label>Amount</label>
+                      <input
+                        type="number"
+                        name="amount"
+                        className="form-control"
+                        value={formData.amount}
+                        onChange={handleChange}
+                      />
+                     
+                    </div>
+                    <div className="form-group mt-2 text-end">
+                      <button type="submit" className="btn btn-primary ">
+                        Pay
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
