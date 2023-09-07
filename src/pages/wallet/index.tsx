@@ -68,8 +68,8 @@ export default function About() {
   const handleSubmit = async (event:any) => {
     event.preventDefault();
     const headers = {
-      "X-Authorization": "851110fb0bb3a9004d056435b79891d9c8bad7b37b34e0868159026d3381df06",
-      "X-Authorization-Secret": "09d28760d5b454ad613e447b671fb0efaa82d7e853e7fe10fe62a4df2fbee459",
+      "X-Authorization": "905a5dfe7bdb46525841bc924a13525498ef6c0c55be5060c32563c548fbed49",
+      "X-Authorization-Secret": "a478c2a1420ca4fd6c86d1e857cd5732c8ef00fb18328734b1ba6e331f1dc413",
       "Content-Type": "application/json",
     };
     try {
