@@ -199,7 +199,7 @@ export default function About() {
                     </div>
                     <div className="form-group mt-2 text-end">
                       <button type="submit" className="btn btn-primary ">
-                        Pay
+                        Add Amount
                       </button>
                     </div>
                   </form>
