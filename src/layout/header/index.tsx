@@ -33,7 +33,7 @@ function Header({ ...props }) {
                   <a className="nav-link" href="#">Services</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Page</a>
+                  <a className="nav-link" href="/wallet">Wallet</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Contact Us</a>
