@@ -87,12 +87,12 @@ export default function About() {
         // Handle success, e.g., show a success message or redirect
         console.log('Form data submitted successfully');
      
-        // if(data){
-        //   window.open(
-        //     data.redirect_url,
-        //     '_blank' 
-        //   );
-        // }
+        if(data){
+          window.open(
+            data.redirect_url,
+            '_blank' 
+          );
+        }
       } else {
         setErrorMessage(data?.msg)
         console.error('Form submission failed');
