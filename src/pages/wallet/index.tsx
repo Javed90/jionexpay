@@ -1,8 +1,9 @@
 import { Footer } from "@/layout/footer";
 import { Header } from "@/layout/header";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { redirect } from 'next/navigation'
+import { useRouter } from "next/router";
 export default function About() {
   var settings = {
     autoplay: true,
@@ -59,7 +60,7 @@ export default function About() {
   const [formData, setFormData] = useState({
       amount: '',
       cust_name: "Johnatan Smith",
-      cust_phone: "(097) 234-5678",
+      cust_phone: "1234567895",
       cust_address: "Bay Area, San Francisco, CA",
       request_type: "Deposit",
       redirect_url: "https://jionexpay.vercel.app/wallet",
@@ -68,14 +69,14 @@ export default function About() {
   const handleSubmit = async (event:any) => {
     event.preventDefault();
     const headers = {
-      "X-Authorization": "905a5dfe7bdb46525841bc924a13525498ef6c0c55be5060c32563c548fbed49",
-      "X-Authorization-Secret": "a478c2a1420ca4fd6c86d1e857cd5732c8ef00fb18328734b1ba6e331f1dc413",
+      "X-Authorization-Aceess": "94a30615b9fff8df0a21c67e4a1e627ca4e6e81b014f3e8f310063955335a867",
+      "X-Authorization-Public": "c25231c358ebab721341e88fe5b50b384a8901bf2fab8bb04b48000a13fefcc7",
       "Content-Type": "application/json",
     };
     try {
       
     const response = await fetch(
-      "https://api.rootficus.com/api/v1/secure/payment_requests",
+      "https://api.jionexpay.com/api/v1/secure/payment_requests",
       {
         method: "POST",
         headers: headers,
@@ -83,16 +84,13 @@ export default function About() {
       }
     );
     const data = await response.json();
-      if (data.success == 200) {
+      if (data.status == 200) {
         // Handle success, e.g., show a success message or redirect
         console.log('Form data submitted successfully');
-     
-        if(data){
           window.open(
             data.redirect_url,
             '_blank' 
           );
-        }
       } else {
         setErrorMessage(data?.msg)
         console.error('Form submission failed');
@@ -106,7 +104,30 @@ export default function About() {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
-  
+  const [currentBalance, setCurrentBalance]: any = useState([]);
+  const getCurrentBalance = async () => {
+    const headers = {
+      "X-Authorization-Aceess": "94a30615b9fff8df0a21c67e4a1e627ca4e6e81b014f3e8f310063955335a867",
+      "X-Authorization-Public": "c25231c358ebab721341e88fe5b50b384a8901bf2fab8bb04b48000a13fefcc7",
+      "Content-Type": "application/json",
+    };
+    const response = await fetch(
+      `https://api.jionexpay.com/api/v1/secure/payment_requests/cust_balance?cust_phone=1234567895`,
+      {
+        method: "GET",
+        headers: headers,
+      }
+    );
+    let data:any = await response.json();
+    data = JSON.stringify(data);
+    data = JSON.parse(data);
+   setCurrentBalance(data);
+  };
+  const router = useRouter();
+  useEffect(() => {
+    getCurrentBalance();
+  }, [router.asPath]);
+
   return (
     <>
       <Header></Header>
@@ -152,7 +173,7 @@ export default function About() {
                       <p className="mb-0">Phone</p>
                     </div>
                     <div className="col-sm-9">
-                      <p className="text-muted mb-0">(097) 234-5678</p>
+                      <p className="text-muted mb-0">1234567895</p>
                     </div>
                   </div>
 
@@ -174,7 +195,7 @@ export default function About() {
                     </div>
                     <div className="col-sm-9">
                       <p className="text-muted mb-0">
-                       100
+                       {currentBalance?.data?.balance}
                       </p>
                     </div>
                   </div>
@@ -184,7 +205,7 @@ export default function About() {
             <div className="col-lg-6">
               <div className="card mb-4">
                 <div className="card-body">
-                  <p className="danger">{errorMessage}</p>
+                  <p className="text-danger">{errorMessage}</p>
                   <form onSubmit={handleSubmit}>
                     <div className="form-group">
                       <label>Amount</label>
