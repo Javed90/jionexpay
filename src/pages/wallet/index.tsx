@@ -69,8 +69,8 @@ export default function About() {
   const handleSubmit = async (event:any) => {
     event.preventDefault();
     const headers = {
-      "X-Authorization-Aceess": "94a30615b9fff8df0a21c67e4a1e627ca4e6e81b014f3e8f310063955335a867",
-      "X-Authorization-Public": "c25231c358ebab721341e88fe5b50b384a8901bf2fab8bb04b48000a13fefcc7",
+      "X-Authorization-Aceess": "d5b338ab2fef5ddf59fb76c9d4db92e0fe5865135a8d4510c092e276e732d26b",
+      "X-Authorization-Public": "3bb6ba17764028ffbe7fa3067ca4cca237b522073164c8217f45c3dcba1453bf",
       "Content-Type": "application/json",
     };
     try {
@@ -107,8 +107,8 @@ export default function About() {
   const [currentBalance, setCurrentBalance]: any = useState([]);
   const getCurrentBalance = async () => {
     const headers = {
-      "X-Authorization-Aceess": "94a30615b9fff8df0a21c67e4a1e627ca4e6e81b014f3e8f310063955335a867",
-      "X-Authorization-Public": "c25231c358ebab721341e88fe5b50b384a8901bf2fab8bb04b48000a13fefcc7",
+      "X-Authorization-Aceess": "d5b338ab2fef5ddf59fb76c9d4db92e0fe5865135a8d4510c092e276e732d26b",
+      "X-Authorization-Public": "3bb6ba17764028ffbe7fa3067ca4cca237b522073164c8217f45c3dcba1453bf",
       "Content-Type": "application/json",
     };
     const response = await fetch(
