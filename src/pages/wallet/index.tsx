@@ -63,7 +63,7 @@ export default function About() {
       cust_phone: "1234567895",
       cust_address: "Bay Area, San Francisco, CA",
       request_type: "Deposit",
-      redirect_url: "https://jionexpay.vercel.app/wallet",
+      redirect_url: "https://fionex.vercel.app/wallet",
   });
   const [formData2, setFormData2] = useState({
     amount: '',
@@ -71,7 +71,7 @@ export default function About() {
     cust_phone: "1234567895",
     cust_address: "Bay Area, San Francisco, CA",
     request_type: "Withdraw",
-    redirect_url: "https://jionexpay.vercel.app/wallet"
+    redirect_url: "https://fionex.vercel.app/wallet"
     
 });
  const [errorMessage, setErrorMessage] = useState();

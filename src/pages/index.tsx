@@ -68,8 +68,7 @@ export default function Home() {
               {/* <!-- Left Side: Content --> */}
               <h1>Welcome to Our Website</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                condimentum feugiat odio, vel eleifend est aliquet eu.
+              Millions of businesses of all sizes—from startups to large enterprises—use fionpay's software and APIs to accept payments, send payouts, and manage their businesses online.
               </p>
               <button className="btn btn-primary">
                 Get in Touch{" "}
@@ -176,7 +175,7 @@ export default function Home() {
         <div className="col-md-6">
           <div className="about-mission fade-up">
             <div className="round-arrow-two"><img src="/images/arrow-2.png" alt=""/></div>
-            <h2>Our Mission at JioNexPay </h2>
+            <h2>Our Mission at Fionex </h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At doloremque dignissimos sapiente nulla
               molestiae facilis perferendis vitae obcaecati, sed nobis tenetur odit eos natus iure ab illo magni itaque
               officia.</p>

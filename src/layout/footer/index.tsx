@@ -58,7 +58,7 @@ function Footer() {
       <div className="copyright">
         <div className="row">
           <div className="col-md-6">
-            <p>Copyright © 2023 JioNexPay | Powered by JioNexPay</p>
+            <p>Copyright © 2023 Fionex | Powered by Fionex</p>
           </div>
           <div className="col-md-6">
             <div className="social-media">

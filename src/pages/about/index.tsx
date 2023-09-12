@@ -163,7 +163,7 @@ export default function About() {
         <div className="col-md-6">
           <div className="about-mission fade-up">
             <div className="round-arrow-two"><img src="/images/arrow-2.png" alt=""/></div>
-            <h2>Our Mission at JioNexPay </h2>
+            <h2>Our Mission at Fionex </h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At doloremque dignissimos sapiente nulla
               molestiae facilis perferendis vitae obcaecati, sed nobis tenetur odit eos natus iure ab illo magni itaque
               officia.</p>

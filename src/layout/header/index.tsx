@@ -12,7 +12,7 @@ function Header({ ...props }) {
       <div className="row align-items-center">
         <div className="col-lg-3 col-md-6 col-12">
           {/* <!-- Left Side: Logo --> */}
-          <h2><Link href="/" >JioNexPay</Link></h2>
+          <h2><Link href="/" >Fionex</Link></h2>
         </div>
         <div className="col-lg-6 col-md-6 col-12 text-center">
           {/* <!-- Middle: Menu --> */}
