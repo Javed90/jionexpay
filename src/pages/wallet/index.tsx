@@ -71,6 +71,7 @@ export default function About() {
     cust_phone: "1234567895",
     cust_address: "Bay Area, San Francisco, CA",
     request_type: "Withdraw",
+    redirect_url: "https://jionexpay.vercel.app/wallet"
     
 });
  const [errorMessage, setErrorMessage] = useState();
@@ -86,7 +87,7 @@ export default function About() {
     try {
       
     const response = await fetch(
-      "https://api.jionexpay.com/api/v1/secure/payment_requests",
+      "https://api.fionpay.com/api/v1/secure/payment_requests",
       {
         method: "POST",
         headers: headers,
@@ -122,14 +123,14 @@ export default function About() {
       "Content-Type": "application/json",
     };
     try {
-      console.log(formData?.amount,currentBalance)
+     // console.log(formData?.amount,currentBalance)
       if(currentBalance.data.balance < formData2?.amount){
         const string:any = `You can not withdrawal more then current balance `+currentBalance.data.balance;
         setErrorMessage2(string);
         
       }else{
         const response = await fetch(
-          "https://api.jionexpay.com/api/v1/secure/payment_requests",
+          "https://api.fionpay.com/api/v1/secure/payment_requests",
           {
             method: "POST",
             headers: headers,
@@ -138,8 +139,12 @@ export default function About() {
           const data = await response.json();
       if (data.status == 200) {
     
-        console.log('Form data submitted successfully');
+        //console.log('Form data submitted successfully');
         setMessage(data?.msg)
+        window.open(
+          data.redirect_url,
+          '_blank' 
+        );
           
       } else {
         setErrorMessage2(data?.msg)
@@ -163,7 +168,7 @@ export default function About() {
       "Content-Type": "application/json",
     };
     const response = await fetch(
-      `https://api.jionexpay.com/api/v1/secure/payment_requests/cust_balance?cust_phone=1234567895`,
+      `https://api.fionpay.com/api/v1/secure/payment_requests/cust_balance?cust_phone=1234567895`,
       {
         method: "GET",
         headers: headers,
